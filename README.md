@@ -3,8 +3,8 @@
 The starter repository for the Knowledge Representation team project
 (Lebanese University, MSc). Every session of the course adds one layer; this
 repository is where your team puts its own version of each, on its own
-topic and data. In Session 8 the instructor clones it fresh and runs one
-command. What comes up is what is graded.
+topic and data. You hand it in 48 hours before Session 8; the instructor
+clones it fresh, runs one command, and grades what comes up, once.
 
 It ships with a tiny real example (60 Brunel orders from the course's shared
 case), so the whole stack comes up on the first day. Replace the example,
@@ -64,16 +64,32 @@ The endpoint is only ever loaded with data that passes the gate. Change one
 row of `data/example.sql` so an order weighs 0 and run the pipeline again: it
 stops at step 3 and says why.
 
-## The Session 8 checklist
+## How it is graded
 
-The checklist agreed in Session 7; the defense tries each item on a clean
-checkout:
+Handed in 48 hours before Session 8, and graded once (55 percent of the
+course grade). The instructor clones it into an empty folder, adds a `.env`,
+runs `docker compose up --build`, and gives each layer one mark: works (full
+points), partly (half) or missing (none). A layer that cannot be shown
+working from this clean checkout is at most partly.
 
-- one command starts the whole stack from a clean checkout;
-- every service listens on 127.0.0.1 only, and keys live only in `.env`;
-- the SHACL gate runs before data reaches the endpoint (and in CI);
-- the test set's score is recorded, with the model and the date;
-- a real unanswerable question is refused, with a reason.
+| Layer | Points |
+|---|---|
+| Ontology | 10 |
+| Shapes and validation | 10 |
+| Mapping and integration | 9 |
+| Learning over the graph | 9 |
+| Access layer | 9 |
+| Report and open problem | 8 |
+
+Before you hand in, check the five things the class agreed in Session 7:
+one command from a clean checkout; services on 127.0.0.1 only and keys only
+in `.env`; the SHACL gate before the endpoint and in CI; the test set's
+score recorded with the model and the date; a real unanswerable question
+refused, with a reason.
+
+In Session 8 each of you defends the system (30 percent, individual): the
+running stack answers one question and refuses one, then each student
+answers 2 or 3 questions about parts they did not build.
 
 ## Rules the course holds you to
 
