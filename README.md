@@ -10,6 +10,13 @@ It ships with a tiny real example (60 Brunel orders from the course's shared
 case), so the whole stack comes up on the first day. Replace the example,
 one layer at a time, with your own.
 
+## Start your team's repository
+
+One teammate opens https://github.com/ahmabboud/kr-team-template, presses
+**Use this template**, then **Create a new repository**, and adds the
+teammates as collaborators. Everyone clones the new repository; nobody
+commits to this template.
+
 ## Run it
 
 ```sh
