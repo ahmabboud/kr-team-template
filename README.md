@@ -6,6 +6,9 @@ repository is where your team puts its own version of each, on its own
 topic and data. You hand it in 48 hours before Session 8; the instructor
 clones it fresh, runs one command, and grades what comes up, once.
 
+The labs and slides are at
+https://ahmabboud.github.io/course_knowledge_representation/.
+
 It ships with a tiny real example (60 Brunel orders from the course's shared
 case), so the whole stack comes up on the first day. Replace the example,
 one layer at a time, with your own.
@@ -64,6 +67,15 @@ The endpoint is only ever loaded with data that passes the gate. Change one
 row of `data/example.sql` so an order weighs 0 and run the pipeline again: it
 stops at step 3 and says why.
 
+## When
+
+Form your team and agree a topic before Session 2, and start your own build
+from directly after Session 1, one layer behind each session. Two
+checkpoints give you feedback and are not graded: Milestone 1 (end of
+Session 4), the ontology and shapes on your own data, and Milestone 2 (end
+of Session 6), the graph models with their baseline and a split that does
+not leak. Push to your repository for each.
+
 ## How it is graded
 
 Handed in 48 hours before Session 8, and graded once (55 percent of the
@@ -81,7 +93,8 @@ working from this clean checkout is at most partly.
 | Access layer | 9 |
 | Report and open problem | 8 |
 
-Before you hand in, check the five things the class agreed in Session 7:
+Before you hand in, check the five things on the Session 7 checklist, as
+the class adjusted it:
 one command from a clean checkout; services on 127.0.0.1 only and keys only
 in `.env`; the SHACL gate before the endpoint and in CI; the test set's
 score recorded with the model and the date; a real unanswerable question
@@ -89,13 +102,16 @@ refused, with a reason.
 
 In Session 8 each of you defends the system (30 percent, individual): the
 running stack answers one question and refuses one, then each student
-answers 2 or 3 questions about parts they did not build.
+answers 2 or 3 questions about parts they did not build. An ontology the team
+cannot defend loses its ontology points.
 
 ## Rules the course holds you to
 
 - Commit under your own account; one branch and one pull request per person,
   reviewed by a teammate.
 - Never commit `.env`, a key or a password.
+- Choose an open dataset with a stated licence, and a published ontology to
+  reuse; check the licence of the exact feed or item set you use.
 - Every third-party ontology, vocabulary and dataset goes in the report with
   its licence.
 - Any teammate can be asked about any part, in Session 8.
