@@ -27,6 +27,10 @@ cp .env.example .env        # then put your Gemini key after GOOGLE_API_KEY=
 docker compose up --build
 ```
 
+On Windows, install Docker Desktop (see the course's `demos/README.md` for
+the steps) and use PowerShell: `Copy-Item .env.example .env`, then the same
+`docker compose up --build`.
+
 **Expect:** the pipeline prints five steps and `done` (on the example:
 1,185 triples, 0 Violation, 189 VoID triples), then the access layer serves
 on http://127.0.0.1:8000. Try
@@ -35,7 +39,8 @@ The endpoint is at http://127.0.0.1:3030 (dataset `kr`).
 
 Without Docker, the pipeline also runs on its own (Python 3.12, from the
 repository root): `pip install -r pipeline/requirements-pipeline.txt`, then
-`pip install --no-deps morph-kgc==2.10.0`, then `python pipeline/run.py --no-load`.
+`pip install --no-deps morph-kgc==2.10.0`, then `python pipeline/run.py --no-load`. (On Windows, use `py -3.12` for
+`python` when creating the environment, as the course's `demos/README.md` does.)
 
 ## What goes where
 
